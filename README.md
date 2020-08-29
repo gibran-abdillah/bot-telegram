@@ -19,3 +19,5 @@ you can edit the feature at core/otak.py
 
 
 ### Look at my bot at [ bot gibran ]( https://t.me/gbrn_bot )
+
+![ Screenshot ]( ../master/screenshots.jpg)
