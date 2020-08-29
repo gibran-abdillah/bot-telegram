@@ -20,7 +20,7 @@ class bot_gibran:
     # send message function
     def send_message(self,id,pesan):
         data = {'chat_id':id,
-        'text':pesan
+        'text':pesan 
         }
         rr = my_session.post(my_url+'/sendMessage',data=data) # reply a message 
         
@@ -49,10 +49,10 @@ class bot_gibran:
            mem_baru = data_json['message']['new_chat']['first_name'] # mendapatkan nama depan member 
            self.send_message(id=chat_id,pesan='Halo, saya adalah bot')
 
-        elif 'mime_type' in str(data_json):
-            print(data_json)
+        elif 'mime_type' in str(data_json): # filter content type
+            print(data_json) # show at your terminal
             file_id = data_json['message']['document']['file_id']
-            if data_json['message']['document']['mime_type'] == 'text/plain':
+            if data_json['message']['document']['mime_type'] == 'text/plain': # filter if file (txt)
                 self.send_message(id=chat_id,pesan='File anda sedang di proses ...')
                 self.download_file(file_id=file_id,chat_id=chat_id)
             else:

@@ -1,13 +1,18 @@
 from PIL import Image,ImageDraw,ImageFont
 import random
 
+
+# Lazy feature 
+
+
 class gibran_curang:
     def __init__(self,your_file):
         self.your_file = your_file
 
+    
     def anjay_curang(self,your_file):
-        img = Image.open('core/img/template.jpg')
-        my_font = ImageFont.truetype(font='core/fonts/hand.ttf',size=140)
+        img = Image.open('core/img/template.jpg') # load templates
+        my_font = ImageFont.truetype(font='core/fonts/hand.ttf',size=140) # load fonts
         gambar = ImageDraw.Draw(img)
         kiri,tinggi = 274,440
         mulai = 0
@@ -19,9 +24,5 @@ class gibran_curang:
             else:
                 tinggi += 88;default_tinggi += 88
                     
-            gambar.text((kiri,tinggi),teks,(0,0,14),font=my_font)
-        img.save('gibran.jpg')
-    
-    def put_text(self,img,gambar,kiri,tinggi,teks,fonts):
-        gambar.text((kiri,tinggi),teks,font=fonts)
-        img.save('gibran.jpg')
+            gambar.text((kiri,tinggi),teks,(0,0,14),font=my_font) # (x,y),text,(colour),font
+        img.save('gibran.jpg') # save the result
