@@ -7,6 +7,6 @@ import requests,os,json
 
 # configuration
 token = os.environ['TOKEN'] # dont remove this 
-my_url = 'https://api.telegram.org/bottoken'
-bot_token = 'bottoken'
+my_url = 'https://api.telegram.org/bottoken' # change 'bottoken' with your token
+bot_token = 'bottoken' # change this to
 app = Flask(__name__)
