@@ -16,8 +16,9 @@ def coba_coba(message):
       # you can add some feature here ...
        data_logic = {'description':deskripsi_bot,
                      'help':help_menu, 
-                     'p':'Ga sopan anjing, salam yang bener',
-                     'randquotes':str(random.choice(open('core/txt/quotes.txt').readlines())) # mengambil quotes random 
+                     'p':'Ga sopan anj*ng, salam yang bener',
+                     'randquotes':str(random.choice(open('core/txt/quotes.txt').readlines())), # mengambil quotes random 
+                     'randfakta':str(random.choice(open('core/txt/fakta.txt').readlines())) # mengambil text random 
                      }
        return data_logic[message]
     except KeyError:
